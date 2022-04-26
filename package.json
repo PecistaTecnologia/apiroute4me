@@ -1,0 +1,18 @@
+{
+  "name": "apiroute4me",
+  "version": "1.0.0",
+  "description": "Deploy in running express",
+  "main": "index.js",
+  "enginer": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
