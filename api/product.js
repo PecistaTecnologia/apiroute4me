@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
     }
 router.post("/", async (req, res) => {
     try {
-        req.json({
+        res.json({
             status: 200,
             message: "Requisição Valida"
         })
