@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
         console.error(error);
         return res.status(500).send("Server error");
     }
+})
 router.post("/", async (req, res) => {
     try {
         res.json({
@@ -21,8 +22,6 @@ router.post("/", async (req, res) => {
         console.error(error);
         return res.status(500).send("Server error");
     }
-})
-
 });
 
 module.exports = router;

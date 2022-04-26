@@ -1,10 +1,10 @@
 const express = require('express');
-const product = require('./api/product')
+const product = require('./api/rotas')
 
 const app = express();
 
 const PORT  = process.env.PORT || 5050;
 
-app.use("/api/product.js", product);
+app.use("/user", product);
 
 app.listen(PORT, () => console.log(`Server rodando na porta ${PORT}`));
