@@ -1,11 +1,11 @@
 const express = require('express');
-const userController = require('./api/Controller/userController');
+const User = require('./api/rotas');
 const app = express();
 
 
 const PORT  = process.env.PORT || 5050;
 
-app.use("/user", userController);
+app.use("/user", User);
 
 app.listen(PORT, () => console.log(`Server rodando na porta  ${PORT}`));
 
