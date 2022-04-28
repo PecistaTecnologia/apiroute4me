@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     try {
         res.json({
             status: 200,
-            message: "valida",
+            message: ["Api", "Pecista/Kaizen", "Version 1.0"],
         });
     } catch (error) {
         console.error(error);
@@ -20,8 +20,14 @@ router.get("/", async (req, res) => {
     }
 })
 
-router.post("/user", (req, res) => {
-
+router.post("/user", async (req, res) => {
+    try{
+        //await user.create(dados);
+    console.log(req.body)
+    } catch  (error) {
+        console.error(error);
+        return res.status(500).send("Server error");
+    }
 }); 
 
 module.exports = router;
