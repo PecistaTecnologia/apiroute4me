@@ -9,4 +9,6 @@ const sequelize = new Sequelize(
     })
 
 
+module.sequelize = sequelize;
 module.exports = sequelize;
+
