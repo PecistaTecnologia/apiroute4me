@@ -6,12 +6,9 @@ app.use(express.json());
 
 const users = [];
 
-app.get("/", (req, res) => {
+app.get("/user", (req, res) => {
     try {
-        res.json({
-            status: 200,
-            message: {"Api": "Pecista/Kaizen", "Version": "1.0"}
-        });
+        res.json({"Api": "Pecista/Kaizen", "Version": "1.0"});
     } catch (error) {
         console.error(error);
         return res.status(500).send("Server error");
