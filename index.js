@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('./api/rotas');
+const User = require('./src/rotas');
 const app = express();
 
 

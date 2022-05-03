@@ -22,12 +22,12 @@ app.post("/user",  (req, res) => {
         if( event.activity_type != "route-optimized") {
             res.status(404).json({
                 error: true,
-                message: "requisição invalida"
+                message: "request failed"
             });
         } else {
             res.status(200).json({
                 error: false,
-                message: "requisição valida"
+                message: "request validation"
             });
         }
     const { route_id, activity_type } = req.body;
