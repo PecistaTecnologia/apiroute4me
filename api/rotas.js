@@ -6,30 +6,30 @@ app.use(express.json());
 
 const users = [];
 
-app.get("/user", (req, res) => {
-    try {
-        res.json({"Api": "Pecista/Kaizen", "Version": "1.0"});
-    } catch (error) {
-        console.error(error);
+    app.get("/", (req, res) => {
+         try {
+            res.json({"Api": "Pecista/Kaizen", "Version": "1.0"});
+        } catch (error) {
+            console.error(error);
         return res.status(500).send("Server error");
-    }
-})
+        }
+    })
 
 app.post("/user",  (req, res) => {
 
-        // const event = req.body;
+        const event = req.body;
 
-        // if( event.activity_type != "route-optimized") {
-        //     res.status(404).json({
-        //         error: true,
-        //         message: "requisição invalida"
-        //     });
-        // } else {
-        //     res.status(200).json({
-        //         error: false,
-        //         message: "requisição valida"
-        //     });
-        // }
+        if( event.activity_type != "route-optimized") {
+            res.status(404).json({
+                error: true,
+                message: "requisição invalida"
+            });
+        } else {
+            res.status(200).json({
+                error: false,
+                message: "requisição valida"
+            });
+        }
     const { route_id, activity_type } = req.body;
 
     const user = {
@@ -37,13 +37,11 @@ app.post("/user",  (req, res) => {
         activity_type
     };
 
-
-
     users.push(user);
+    console.log(user)
 
 
-
-    return res.status(201).json({error: false, message: "Resiquição via POST"});
+    //return res.status(201).json({error: false, message: "Resiquição via POST"});
 }); 
 
 module.exports = app;

@@ -5,7 +5,7 @@ const app = express();
 
 const PORT  = process.env.PORT || 5050;
 
-app.use("/user", User);
+app.use("/", User);
 
 app.listen(PORT, () => console.log(`Server rodando na porta  ${PORT}`));
 
