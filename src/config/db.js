@@ -1,11 +1,11 @@
-const  Sequelize  = require('sequelize');
-const sequelize = new Sequelize
-('pain1521_rastreio', 'pain1521_pecista', '@Pecista2021', {
-      host: '162.241.62.177',
-      port: '3306',
-      dialect: 'mysql',
-      timestamps: false
-  });
+const mysql = require('mysql2/promise');
+
+var pool = mysql.createPool({
+  host: '162.241.62.177',
+  user: 'pain1521_pecista',
+  password: ['@Pecista2021'],
+  database: 'pain1521_rastreio'
+});
 
   try{
       console.log("Conexão com MySQL realizado com sucesso");
@@ -16,5 +16,5 @@ const sequelize = new Sequelize
 
 
 
-module.exports = sequelize;
+module.exports = pool;
 
