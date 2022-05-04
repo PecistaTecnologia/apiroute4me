@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const r4m = require('../src/Models/r4mRotas');
 
 
 app.use(express.json());
@@ -39,10 +38,10 @@ app.post("/user",  (req, res) => {
     };
 
     users.push(user);
-    console.log(user);
+    console.log(user)
 
 
-    return res.status(201).json({error: false, message: "Resiquição via POST"});
+    //return res.status(201).json({error: false, message: "Resiquição via POST"});
 }); 
 
 module.exports = app;
