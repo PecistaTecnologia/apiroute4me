@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const r4m = require('../src/Models/r4mRotas');
 
 
 app.use(express.json());
@@ -32,13 +33,13 @@ app.post("/user",  (req, res) => {
         }
     const { route_id, activity_type } = req.body;
 
-    const user = {
+    r4m.create({
         route_id,
         activity_type
-    };
+    });
 
-    users.push(user);
-    console.log(user)
+    users.push(r4m);
+    console.log(r4m);
 
 
     //return res.status(201).json({error: false, message: "Resiquição via POST"});
