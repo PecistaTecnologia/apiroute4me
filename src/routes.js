@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require('./Config/db');
 
 
 app.use(express.json());
@@ -32,10 +33,10 @@ app.post("/user",  (req, res) => {
         }
     const { route_id, activity_type } = req.body;
 
-    const user = {
-        route_id,
+    user.create({
+        route_id: route_id,
         activity_type
-    };
+    });
 
     users.push(user);
     console.log(user)
