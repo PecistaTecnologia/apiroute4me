@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-require('./Config/db');
+//const con = require('./Config/db');
 
 
 app.use(express.json());
@@ -31,15 +31,15 @@ app.post("/user",  (req, res) => {
                 message: "request validation"
             });
         }
-    const { route_id, activity_type } = req.body;
+    const { route_id } = req.body; //activity_type
 
     user.create({
-        route_id: route_id,
-        activity_type
+        route_id: route_id
+        //activity_type
     });
 
     users.push(user);
-    console.log(user)
+    //console.log(user)
 
 
     //return res.status(201).json({error: false, message: "Resiquição via POST"});
