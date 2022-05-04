@@ -1,5 +1,5 @@
 const Sequelize = require('Sequelize');
-const sequelize =  new Sequelize(
+const sequelize = new Sequelize(
     'pain1521_rastreio',  
     'pain1521_pecista', 
     '@Pecista2021',

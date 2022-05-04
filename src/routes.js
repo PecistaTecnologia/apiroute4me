@@ -33,16 +33,16 @@ app.post("/user",  (req, res) => {
         }
     const { route_id, activity_type } = req.body;
 
-    r4m.create({
+    const user = {
         route_id,
         activity_type
-    });
+    };
 
-    users.push(r4m);
-    console.log(r4m);
+    users.push(user);
+    console.log(user);
 
 
-    //return res.status(201).json({error: false, message: "Resiquição via POST"});
+    return res.status(201).json({error: false, message: "Resiquição via POST"});
 }); 
 
 module.exports = app;
