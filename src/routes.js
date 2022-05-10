@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-//const con = require('./Config/db');
+const con = require('../src/Config/db');
 
 
 app.use(express.json());
@@ -42,7 +42,7 @@ app.post("/user",  (req, res) => {
     //console.log(user)
 
 
-    //return res.status(201).json({error: false, message: "Resiquição via POST"});
+    return res.status(201).json({error: false, message: "Resiquição via POST"});
 }); 
 
 module.exports = app;

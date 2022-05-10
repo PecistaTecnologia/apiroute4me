@@ -1,5 +1,5 @@
-const { con } = require("../routes");
 const mysql = require('mysql');
+
 
 const con = mysql.createConnection({
     host:     '162.241.62.177',
@@ -13,7 +13,7 @@ con.connect((err) => {
         console.log('Erro connecting to database...', err)
         return
     }
-    console.log('Connection established!')
+    console.log('Connection!')
 })
 
 
