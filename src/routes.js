@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const con = require('../src/Config/db');
+
 
 
 app.use(express.json());
@@ -33,12 +33,12 @@ app.post("/user",  (req, res) => {
         }
     const { route_id } = req.body; //activity_type
 
-    con.create({
+    user.create({
         route_id: route_id
         //activity_type
     });
 
-    users.push(con);
+    users.push(user);
     //console.log(user)
 
 
