@@ -33,12 +33,12 @@ app.post("/user",  (req, res) => {
         }
     const { route_id } = req.body; //activity_type
 
-    user.create({
+    con.create({
         route_id: route_id
         //activity_type
     });
 
-    users.push(user);
+    users.push(con);
     //console.log(user)
 
 
