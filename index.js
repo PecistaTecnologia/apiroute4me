@@ -1,6 +1,5 @@
 const express = require('express');
 const User = require('./src/routes');
-require('./src/Config/db')
 const app = express();
 
 
