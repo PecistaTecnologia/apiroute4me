@@ -1,10 +1,9 @@
-const express = require('express');
 const User = require('./src/routes');
-const app = express();
+const http = require('http');
+ 
+const server = http.createServer((req, res) => {
+    console.log('server rodando!')
+})
 
-
-app.use("/", User);
-
-app.listen(3333, () => console.log(`Server rodando na porta  ${3333}`));
-
+server.listen(8080);
 
